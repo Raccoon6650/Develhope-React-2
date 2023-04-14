@@ -1,13 +1,12 @@
-import ClickTracker from './components/ClickTracker';
+//import ClickTracker from './components/ClickTracker';
 //import CounterClick from './components/CounterClick';
-
+import InteractiveWelcome from './components/InteractiveWelcome';
 function App() {
   return (
     <div className="App">
       <header className="App-header">
         <>
-
-          <ClickTracker/>
+        <InteractiveWelcome/>
         </>
       </header>
     </div>
