@@ -8,10 +8,11 @@ const Login = (props) => {
     return (
         <>
         <div>
-        <input type= "email" placeholder="email" onChange={(email) => setEmail(email.target.value)}/>
+        <input type= "email" placeholder="email" onChange={(email) => setEmail(email.target.value)} value={email}/>
         </div>
-        <input type= "password" placeholder="password" onChange={(pass) => setPass(pass.target.value)}/>
+        <input type= "password" placeholder="password" onChange={(pass) => setPass(pass.target.value)} value={pass}/>
         <button disabled= {!(email.length !== 0 && pass.length !== 0) ? true : false}>Submit</button>
+        <button onClick={() =>{ setEmail(""); setPass("")}}>Reset</button>
         </>
     )}
 
