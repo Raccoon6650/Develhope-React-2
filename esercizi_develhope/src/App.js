@@ -1,4 +1,5 @@
 import ClickTracker from './components/ClickTracker';
+import Login from './components/Login';
 //import CounterClick from './components/CounterClick';
 
 function App() {
@@ -7,7 +8,7 @@ function App() {
       <header className="App-header">
         <>
 
-          <ClickTracker/>
+          <Login/>
         </>
       </header>
     </div>
