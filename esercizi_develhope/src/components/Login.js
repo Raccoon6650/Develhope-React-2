@@ -1,18 +1,22 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 const Login = (props) => {
-const email = useRef()
-const pass = useRef()
-const em2 = email.current.value.length 
-const pass2 = pass.current.value.length
+  //const [isDisabled, setIsDisabled] = useState(true);
+  const email = useRef();
+  const pass = useRef();
 
-/*useEffect(() => {
-    const em2 = email.current.value.length 
-    const pass2 = pass.current.value.length 
-    const disabled = !(em2 !== "" && pass2 !== "" ) ? true : false 
-    return disabled
-}, [em2, pass2])*/
+  /*useEffect(() => {
+    setIsDisabled(email.current.value.length === 0 || pass.current.value.length === 0);
+  }, [email.current.value, pass.current.value]);
 
+
+    const [isDisabled, setIsDisabled] = useState(false);
+
+  useEffect(() => {
+    const em2 = email.current.value.length;
+    const pass2 = pass.current.value.length;
+    setIsDisabled(!(em2 !== "" && pass2 !== ""));
+  }, [email, pass]);*/
 
 
 
@@ -30,7 +34,7 @@ const pass2 = pass.current.value.length
                                 await (em2, pass2)
                                 const disabled = !(em2 !== "" && pass2 !== "" ) ? true : false 
                                 return disabled}}>Submit</button>*/}
-        <button disabled = {}>Submit</button>
+        <button disabled = { email===0 && pass ===0 ? true : false }>Submit</button>
         <button onClick={() =>{email.current.value = ""; pass.current.value = ""}}>Reset</button>
         </>
     )}
