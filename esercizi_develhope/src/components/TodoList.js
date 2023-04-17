@@ -9,6 +9,10 @@ const TodoList = () => {
     setNewItem("");
   };
 
+  const resetList = () => { 
+    setItems([]);
+  };
+
   return (
     <div>
       <input
@@ -17,6 +21,7 @@ const TodoList = () => {
         onChange={(e) => setNewItem(e.target.value)}
       />
       <button onClick={addItem}>Add Item</button>
+      <button onClick={resetList}>Reset</button>
       <ul>
         {items.map((item, i) => ( 
           <li key={i} style={{listStyleType: 'numb'}}>{item}</li>
