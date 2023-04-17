@@ -13,7 +13,7 @@ const TodoList = () => {
     <div>
       <input
         type="text"
-        //value={newItem}
+        value={newItem}//il nuovo esercizio chiede di aggiungere questa stringa... Lo avevo già fatto.
         onChange={(e) => setNewItem(e.target.value)}
       />
       <button onClick={addItem}>Add Item</button>
