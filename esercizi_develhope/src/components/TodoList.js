@@ -13,7 +13,7 @@ const TodoList = () => {
     <div>
       <input
         type="text"
-        value={newItem}
+        //value={newItem}
         onChange={(e) => setNewItem(e.target.value)}
       />
       <button onClick={addItem}>Add Item</button>
