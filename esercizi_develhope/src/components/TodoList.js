@@ -13,18 +13,24 @@ const TodoList = () => {
     setItems([]);
   };
 
+  const deleteItem = (i) => {
+    setItems(items.filter((item, index) => index !== i)); //per eliminare gli elementi con l'indice corrente
+  };
+  
+
+
   return (
     <div>
       <input
         type="text"
-        value={newItem}//il nuovo esercizio chiede di aggiungere questa stringa... Lo avevo già fatto.
+        value={newItem}
         onChange={(e) => setNewItem(e.target.value)}
       />
       <button onClick={addItem}>Add Item</button>
       <button onClick={resetList}>Reset</button>
       <ul>
         {items.map((item, i) => ( 
-          <li key={i} style={{listStyleType: 'numb'}}>{item}</li>
+          <li key={i} style={{listStyleType: 'numb'}}>{item} <button onClick={() => deleteItem(i)}>Delite</button></li>
         ))}
       </ul>
     </div>
