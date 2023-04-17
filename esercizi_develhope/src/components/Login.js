@@ -20,7 +20,7 @@ const Login = (props) => {
         </div>
         <input type= "password" placeholder="password" ref={pass} onChange={isDisabled}/>
         <button ref={button} disabled = "true">Submit</button>
-        <button onClick={() =>{email.current.value = ""; pass.current.value = ""; button.current.disabled = "true"}}>Reset</button>
+        <button onClick={() =>{email.current.value = ""; pass.current.value = ""; button.current.disabled = "true"; email.current.focus()}}>Reset</button>
         </>
     )}
 
