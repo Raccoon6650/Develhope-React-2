@@ -1,4 +1,4 @@
-import ClickTracker from './components/ClickTracker';
+//import ClickTracker from './components/ClickTracker';
 import Login from './components/Login';
 //import CounterClick from './components/CounterClick';
 
