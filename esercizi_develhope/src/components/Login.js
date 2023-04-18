@@ -1,16 +1,24 @@
-import React, {useRef} from "react";
+import React, {useRef, useState} from "react";
 
 const Login = (props) => {
   const email = useRef();
   const pass = useRef();
   const button = useRef();
 
+  const [emailUser, newEmailUser] = useState()
+  const [passUser, newPassUser] = useState()
+
   function isDisabled (){
     const em2 = email.current.value.length
     const pass2 = pass.current.value.length
     const disabled = !(em2 !== 0 && pass2 !== 0) ? true : false 
     button.current.disabled = disabled
-    console.log (disabled)}
+    }
+    function saveData () {
+      newEmailUser(email.current.value);
+      newPassUser(pass.current.value);
+      }
+
 
 
     return (
@@ -19,7 +27,7 @@ const Login = (props) => {
         <input type= "email" placeholder="email" ref={email} onChange={isDisabled} />
         </div>
         <input type= "password" placeholder="password" ref={pass} onChange={isDisabled}/>
-        <button ref={button} disabled = "true">Submit</button>
+        <button ref={button} onClick={saveData} disabled = "true">Submit</button>
         <button onClick={() =>{email.current.value = ""; pass.current.value = ""; button.current.disabled = "true"}}>Reset</button>
         </>
     )}
