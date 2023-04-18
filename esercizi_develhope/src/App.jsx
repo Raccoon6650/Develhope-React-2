@@ -1,13 +1,9 @@
 import React from 'react';
-//import Counter from './components/Counter';
-import LoginForm from './components/LoginForm';
-//import Counter from './components/CounterClick';
-//import GitHubUser from './components/GitHubUser';
-//import GHUList from './components/GHUList';
+import GitHubUserForHook from './components/GitHubUserForHook';
 
 function App() {
     return(
-    <LoginForm/>
+    <GitHubUserForHook user= "Raccoon6650"/>
     )
 }
 
