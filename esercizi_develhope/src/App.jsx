@@ -1,10 +1,13 @@
-import React, { useEffect, useState } from 'react';
-import CounterClick from './components/CounterClick';
+import React from 'react';
+import Counter from './components/CounterClick';
 
 function App() {
 
+  function onCounterChange (count) {
+    console.log(count)
+  }
   return (
-    <CounterClick/>
+    <Counter onCounterChange={onCounterChange}/>
   );
 }
 
