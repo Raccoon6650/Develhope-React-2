@@ -1,17 +1,11 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import Counter from './components/CounterClick';
+import GitHubUser from './components/GitHubUser';
 
 function App() {
-  const [count, setCount] = useState(0);
-  const increment = () => setCount(count + 1);
-  useEffect(function change () {
 
-    return(
-      console.log({count}))
-},[count])
-  return (
-    <Counter increment={increment} count= {count}/>
-  );
+    <GitHubUser user = {'Raccoon6650'}/>
+
 }
 
 export default App;
