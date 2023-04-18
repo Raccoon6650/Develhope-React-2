@@ -2,18 +2,20 @@ import React, { useEffect, useState } from "react";
 
 const GitHubUser = (props) => {
 
-    const [user, newUser] = useState(props.uName)
+    const [user, newUser] = useState({name: "Loading"})
     async function getName (){
         const userName = await fetch(`https://api.github.com/users/${props.user}`)
         return await userName.json()
     }
 
-    useEffect(()=>{
+    useEffect(()=>{;
         getName().then((user) => {newUser(user)})
     },[])
     return(
         <div>
-            <p>{user.name}</p>
+            Name User: {user.name} <br/>
+            ID: {user.id} <br/>
+            Url Avatar: {user.avatar_url}
         </div>
     )
 }
