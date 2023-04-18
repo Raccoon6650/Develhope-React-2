@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import DisplayContext from './components/DisplayContext'; 
+import React from 'react';
+//import DisplayContext from './components/DisplayContext'; 
 
 //import CounterClick from './components/CounterClick';
 

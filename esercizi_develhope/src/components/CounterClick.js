@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import ClickTracker from "./ClickTracker";
+//import ClickTracker from "./ClickTracker";
 
 const CounterClick = () => {
   const [count, setCount] = useState(0);
