@@ -4,11 +4,11 @@ const Counter = function Counter() {
   const [count, setCount] = useState(0);
 
   useEffect(() => {
-    const intervalId = setInterval(() => {
+    const interval = setInterval(() => {
       setCount(count => count + 1);
     }, 1000);
 
-    return () => clearInterval(intervalId);
+    return () => clearInterval(interval);
   }, []);
 
 
