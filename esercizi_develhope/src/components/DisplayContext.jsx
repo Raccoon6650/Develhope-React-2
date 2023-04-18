@@ -1,20 +1,22 @@
 import React, { useContext } from "react";
-import { LenguageContext } from "../App";
+import LenguageContext from "../LenguageContext";
 
 
 
     const DisplayContext = () => {
 
         const test = useContext(LenguageContext)
+        console.log(test)
         return(
-        <LenguageContext>
-      {['Lingua1', 'Lingua2', 'Lingua3'].map((el) => (
-        <select value={el}>
+        <select>
+      {test.Lingua.map((el) => (
+        <option value={el}>
           {el}
-        </select>
+        </option>
       ))}
-        </LenguageContext>
+        </select>
     )}
 
+  
 
 export default DisplayContext
