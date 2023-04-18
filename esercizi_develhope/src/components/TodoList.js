@@ -15,7 +15,7 @@ const TodoList = (props) => {
       <button onClick={props.addItem}>Add Item</button>
       <button onClick={props.resetList}>Reset</button>
       <ul>
-        {props.List}
+        {props.List} //List è un array di oggetti jsx già mappato tramite il genitore
       </ul>
     </div>
   );
