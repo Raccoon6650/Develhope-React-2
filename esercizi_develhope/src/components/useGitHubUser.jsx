@@ -5,6 +5,7 @@ const useGitHubUser = (username) => {
 
   const [user, setUser] = useState({ name: "Loading" });
   const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState();
 
   useEffect(() => {
     async function getUser() {
@@ -14,8 +15,8 @@ const useGitHubUser = (username) => {
         const data = await response.json();
         setUser(data);
         setIsLoading(false);
-    } catch (error) {
-        setUser(error)
+    } catch (er) {
+        setError(er)
         console.log(`Errore: ${error}`)
     }
     }
