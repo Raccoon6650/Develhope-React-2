@@ -1,9 +1,10 @@
 import React from 'react';
-import GitHubUserForHook from './components/GitHubUserForHook';
+//import GitHubUserForHook from './components/GitHubUserForHook';
+import CarDetails from './components/carDetails';
 
 function App() {
     return(
-    <GitHubUserForHook user= "Raccoon6650"/>
+    <CarDetails InitialData= {{model: 'Nissan - Micra', year: 2005, color: 'Blue' }}/>
     )
 }
 
