@@ -10,9 +10,11 @@ const GitHubUserForHook = (props) => {
 
   return (
     <div>
-      Name User: {user.name} <br />
-      ID: {user.id} <br />
-      Url Avatar: {user.avatar_url}
+      Name User: {user.name} <br/>
+      ID: {user.id} <br/>
+      Url Avatar: {user.avatar_url} <br/>
+
+      {console.log(user)}
     </div>
   );
 };

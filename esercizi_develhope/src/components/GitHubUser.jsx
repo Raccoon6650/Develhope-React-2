@@ -16,6 +16,8 @@ const GitHubUser = (props) => {
             Name User: {user.name} <br/>
             ID: {user.id} <br/>
             Url Avatar: {user.avatar_url}
+
+            All data: {user.XMLHttpRequest}
         </div>
     )
 }
