@@ -3,7 +3,7 @@ import LenguageContext from "../LenguageContext";
 
 
 
-    const DisplayContext = () => {
+    const DisplayLenguage = () => {
         
         const test = useContext(LenguageContext)
         return(
@@ -20,4 +20,4 @@ import LenguageContext from "../LenguageContext";
 
   
 
-export default DisplayContext
+export default DisplayLenguage
